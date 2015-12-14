@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface ViewController : UIViewController
-
+#import "REFrostedViewController.h"
+@interface HomeViewController : UIViewController
+- (IBAction)showMenu;
 
 @end
 
