@@ -101,17 +101,27 @@
                                     </mask>
                                 </variation>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Sn-it-4BK">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.47843137254901963" green="0.81176470588235294" blue="0.99215686274509807" alpha="1" colorSpace="calibratedRGB"/>
+                                <variation key="widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="568" y="44" width="232" height="251"/>
+                                </variation>
+                            </view>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="RRZ-Hk-bdP"/>
+                                <exclude reference="4Sn-it-4BK"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=regular">
                             <mask key="subviews">
                                 <include reference="RRZ-Hk-bdP"/>
+                                <include reference="4Sn-it-4BK"/>
                             </mask>
                         </variation>
                     </view>
