@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
     </dependencies>
     <scenes>
         <!--Home View Controller-->
@@ -46,34 +47,34 @@
                                             <rect key="frame" x="32" y="187" width="500" height="158"/>
                                         </variation>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rack Status" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rOi-gO-HGv">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Racks Status" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rOi-gO-HGv">
                                         <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="57"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                         <variation key="widthClass=regular" fixedFrame="YES">
-                                            <rect key="frame" x="115" y="53" width="335" height="59"/>
+                                            <rect key="frame" x="115" y="53" width="335" height="69"/>
                                         </variation>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="00z-QG-wNL">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GUP-hP-v1s">
                                         <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                         <variation key="widthClass=regular" fixedFrame="YES">
-                                            <rect key="frame" x="261" y="421" width="42" height="21"/>
+                                            <rect key="frame" x="166" y="426" width="233" height="21"/>
                                         </variation>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GUP-hP-v1s">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="00z-QG-wNL">
                                         <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                         <variation key="widthClass=regular" fixedFrame="YES">
-                                            <rect key="frame" x="261" y="477" width="42" height="21"/>
+                                            <rect key="frame" x="144" y="476" width="276" height="21"/>
                                         </variation>
                                     </label>
                                 </subviews>
@@ -85,8 +86,8 @@
                                         <exclude reference="0X9-9h-WXM"/>
                                         <exclude reference="baP-4F-yg8"/>
                                         <exclude reference="rOi-gO-HGv"/>
-                                        <exclude reference="00z-QG-wNL"/>
                                         <exclude reference="GUP-hP-v1s"/>
+                                        <exclude reference="00z-QG-wNL"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=regular" fixedFrame="YES">
@@ -96,17 +97,69 @@
                                         <include reference="0X9-9h-WXM"/>
                                         <include reference="baP-4F-yg8"/>
                                         <include reference="rOi-gO-HGv"/>
-                                        <include reference="00z-QG-wNL"/>
                                         <include reference="GUP-hP-v1s"/>
+                                        <include reference="00z-QG-wNL"/>
                                     </mask>
                                 </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Sn-it-4BK">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Impacts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="noC-UR-K5g">
+                                        <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="widthClass=regular" fixedFrame="YES">
+                                            <rect key="frame" x="65" y="39" width="103" height="21"/>
+                                        </variation>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jcz-XM-svV">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                        <animations/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <variation key="widthClass=regular" fixedFrame="YES">
+                                            <rect key="frame" x="6" y="75" width="220" height="1"/>
+                                        </variation>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0HQ-dL-KR9">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                        <animations/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <variation key="widthClass=regular" fixedFrame="YES">
+                                            <rect key="frame" x="4" y="167" width="220" height="1"/>
+                                        </variation>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="264" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jYp-wb-UKF">
+                                        <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="47"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="widthClass=regular" fixedFrame="YES">
+                                            <rect key="frame" x="42" y="88" width="144" height="75"/>
+                                        </variation>
+                                    </label>
+                                </subviews>
                                 <animations/>
                                 <color key="backgroundColor" red="0.47843137254901963" green="0.81176470588235294" blue="0.99215686274509807" alpha="1" colorSpace="calibratedRGB"/>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="noC-UR-K5g"/>
+                                        <exclude reference="jcz-XM-svV"/>
+                                        <exclude reference="0HQ-dL-KR9"/>
+                                        <exclude reference="jYp-wb-UKF"/>
+                                    </mask>
+                                </variation>
                                 <variation key="widthClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="568" y="44" width="232" height="251"/>
+                                    <mask key="subviews">
+                                        <include reference="noC-UR-K5g"/>
+                                        <include reference="jcz-XM-svV"/>
+                                        <include reference="0HQ-dL-KR9"/>
+                                        <include reference="jYp-wb-UKF"/>
+                                    </mask>
                                 </variation>
                             </view>
                         </subviews>
@@ -126,19 +179,29 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="Xsr-dy-Q9M">
-                        <barButtonItem key="leftBarButtonItem" title="Menu" id="QW3-Ne-Bfg">
-                            <connections>
-                                <action selector="showMenu" destination="BYZ-38-t0r" id="Q9D-xA-1wU"/>
-                            </connections>
-                        </barButtonItem>
+                        <leftBarButtonItems>
+                            <barButtonItem title="Menu" id="QW3-Ne-Bfg">
+                                <connections>
+                                    <action selector="showMenu" destination="BYZ-38-t0r" id="Q9D-xA-1wU"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem enabled="NO" title="Dashboard" style="plain" id="6PW-pp-aFD">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </barButtonItem>
+                        </leftBarButtonItems>
                         <barButtonItem key="rightBarButtonItem" title="Reload" id="ugz-HB-g0F"/>
                     </navigationItem>
                     <nil key="simulatedStatusBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="clockLbl" destination="GUP-hP-v1s" id="gjl-m0-Drh"/>
+                        <outlet property="dateLbl" destination="00z-QG-wNL" id="Bsk-gw-ZDu"/>
+                        <outlet property="labelBtn" destination="6PW-pp-aFD" id="ck6-3s-QSt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1711.5" y="668"/>
+            <point key="canvasLocation" x="1527.75" y="619"/>
         </scene>
         <!--Second View Controller-->
         <scene sceneID="uDB-hm-zqI">
