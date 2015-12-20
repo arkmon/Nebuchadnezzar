@@ -16,19 +16,22 @@
 
 @end
 
-@implementation MenuTableViewController
+@implementation MenuTableViewController {
+    __weak UIView *_staticView;
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    self.tableView.separatorColor = [UIColor colorWithRed:150/255.0f green:161/255.0f blue:177/255.0f alpha:1.0f];
+    self.tableView.separatorColor = [UIColor clearColor];
+    //self.tableView.separatorColor = [UIColor colorWithRed:150/255.0f green:161/255.0f blue:177/255.0f alpha:1.0f];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     self.tableView.opaque = NO;
     self.tableView.backgroundColor = [UIColor clearColor];
     self.tableView.tableHeaderView = ({
-        UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 0, 184.0f)];
+        UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 0, 200.0f)];
+        [view setBackgroundColor:[UIColor colorWithRed:0.302 green:0.302 blue:0.302 alpha:1.0]];
         UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 40, 100, 100)];
         imageView.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin;
         imageView.image = [UIImage imageNamed:@"avatar.jpg"];
@@ -41,7 +44,7 @@
         imageView.clipsToBounds = YES;
         
         UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 150, 0, 24)];
-        label.text = @"Roman Efimov";
+        label.text = @"Warehouse Name.";
         label.font = [UIFont fontWithName:@"HelveticaNeue" size:21];
         label.backgroundColor = [UIColor clearColor];
         label.textColor = [UIColor colorWithRed:62/255.0f green:68/255.0f blue:75/255.0f alpha:1.0f];
@@ -52,8 +55,44 @@
         [view addSubview:label];
         view;
     });
+    
+    UIView *staticView = [[UIView alloc] initWithFrame:CGRectMake(0, self.tableView.bounds.size.height-88, self.tableView.bounds.size.width, 88)];
+    //staticView.backgroundColor = [UIColor redColor];
+    
+    UIView *lineVie= [[UIView alloc]initWithFrame:CGRectMake(0, 0, 320, 1)];
+    [lineVie setBackgroundColor:[UIColor colorWithRed:0.302 green:0.302 blue:0.302 alpha:1.0]];
+    [staticView addSubview:lineVie];
+    
+    
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 30, 0, 24)];
+    label.text = @"Software Version Number";
+    label.font = [UIFont fontWithName:@"HelveticaNeue" size:10];
+    label.backgroundColor = [UIColor clearColor];
+    label.textColor = [UIColor colorWithRed:62/255.0f green:68/255.0f blue:75/255.0f alpha:1.0f];
+    [label sizeToFit];
+    label.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin;
+    
+    UILabel *label2 = [[UILabel alloc] initWithFrame:CGRectMake(10, 50, 0, 24)];
+    label2.text = @"Software Version Number";
+    label2.font = [UIFont fontWithName:@"HelveticaNeue" size:10];
+    label2.backgroundColor = [UIColor clearColor];
+    label2.textColor = [UIColor colorWithRed:62/255.0f green:68/255.0f blue:75/255.0f alpha:1.0f];
+    [label2 sizeToFit];
+    label2.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin;
+    
+    [staticView addSubview:label];
+    [staticView addSubview:label2];
+    
+    [self.tableView addSubview:staticView];
+    _staticView = staticView;
+    self.tableView.contentInset = UIEdgeInsetsMake(0, 0, 88, 0);
+    
+    
 }
-
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    _staticView.transform = CGAffineTransformMakeTranslation(0, scrollView.contentOffset.y);
+}
 #pragma mark -
 #pragma mark UITableView Delegate
 
@@ -62,6 +101,8 @@
     cell.backgroundColor = [UIColor clearColor];
     cell.textLabel.textColor = [UIColor colorWithRed:62/255.0f green:68/255.0f blue:75/255.0f alpha:1.0f];
     cell.textLabel.font = [UIFont fontWithName:@"HelveticaNeue" size:17];
+    [self.tableView bringSubviewToFront:_staticView];
+    
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)sectionIndex
@@ -118,12 +159,12 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 2;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)sectionIndex
 {
-    return 3;
+    return 2;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -137,10 +178,7 @@
     }
     
     if (indexPath.section == 0) {
-        NSArray *titles = @[@"Home", @"Profile", @"Chats"];
-        cell.textLabel.text = titles[indexPath.row];
-    } else {
-        NSArray *titles = @[@"John Appleseed", @"John Doe", @"Test User"];
+        NSArray *titles = @[@"Dashboard", @"Nodes"];
         cell.textLabel.text = titles[indexPath.row];
     }
     

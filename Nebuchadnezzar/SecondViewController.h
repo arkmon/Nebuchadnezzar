@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "REFrostedViewController.h"
-@interface SecondViewController : UIViewController
+#import "CustomTableViewCell.h"
+@interface SecondViewController : UIViewController <UITableViewDelegate,UITableViewDataSource>
 - (IBAction)showMenu;
+@property (nonatomic, strong) NSMutableArray *myArrayTitles;
 @end

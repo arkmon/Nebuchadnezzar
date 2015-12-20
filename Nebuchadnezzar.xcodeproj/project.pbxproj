@@ -20,6 +20,9 @@
 		A6C7A9661C1EBA9E005927A5 /* NavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C7A9651C1EBA9E005927A5 /* NavigationController.m */; };
 		A6C7A9691C1EBAFF005927A5 /* MenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C7A9681C1EBAFF005927A5 /* MenuTableViewController.m */; };
 		A6C7A96C1C1EC164005927A5 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C7A96B1C1EC164005927A5 /* SecondViewController.m */; };
+		CE8B10BC1C25DEC60038C322 /* CustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE8B10BA1C25DEC60038C322 /* CustomTableViewCell.m */; };
+		CE8B10BD1C25DEC60038C322 /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE8B10BB1C25DEC60038C322 /* CustomTableViewCell.xib */; };
+		CE8B10C01C26EC510038C322 /* NodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE8B10BF1C26EC510038C322 /* NodeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +70,11 @@
 		A6C7A9681C1EBAFF005927A5 /* MenuTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuTableViewController.m; sourceTree = "<group>"; };
 		A6C7A96A1C1EC164005927A5 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		A6C7A96B1C1EC164005927A5 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		CE8B10B91C25DEC60038C322 /* CustomTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTableViewCell.h; sourceTree = "<group>"; };
+		CE8B10BA1C25DEC60038C322 /* CustomTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTableViewCell.m; sourceTree = "<group>"; };
+		CE8B10BB1C25DEC60038C322 /* CustomTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
+		CE8B10BE1C26EC510038C322 /* NodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NodeViewController.h; sourceTree = "<group>"; };
+		CE8B10BF1C26EC510038C322 /* NodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NodeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +146,9 @@
 				A6C7A93F1C1EB348005927A5 /* Info.plist */,
 				A6C7A92E1C1EB348005927A5 /* Supporting Files */,
 				A6C7A9611C1EBA24005927A5 /* RootViewController.h */,
+				CE8B10B91C25DEC60038C322 /* CustomTableViewCell.h */,
+				CE8B10BA1C25DEC60038C322 /* CustomTableViewCell.m */,
+				CE8B10BB1C25DEC60038C322 /* CustomTableViewCell.xib */,
 				A6C7A9621C1EBA24005927A5 /* RootViewController.m */,
 				A6C7A9641C1EBA9E005927A5 /* NavigationController.h */,
 				A6C7A9651C1EBA9E005927A5 /* NavigationController.m */,
@@ -145,6 +156,8 @@
 				A6C7A9681C1EBAFF005927A5 /* MenuTableViewController.m */,
 				A6C7A96A1C1EC164005927A5 /* SecondViewController.h */,
 				A6C7A96B1C1EC164005927A5 /* SecondViewController.m */,
+				CE8B10BE1C26EC510038C322 /* NodeViewController.h */,
+				CE8B10BF1C26EC510038C322 /* NodeViewController.m */,
 			);
 			path = Nebuchadnezzar;
 			sourceTree = "<group>";
@@ -292,6 +305,7 @@
 			files = (
 				A6C7A93E1C1EB348005927A5 /* LaunchScreen.storyboard in Resources */,
 				A6C7A93B1C1EB348005927A5 /* Assets.xcassets in Resources */,
+				CE8B10BD1C25DEC60038C322 /* CustomTableViewCell.xib in Resources */,
 				A6C7A9391C1EB348005927A5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -371,7 +385,9 @@
 				A6C7A96C1C1EC164005927A5 /* SecondViewController.m in Sources */,
 				A6C7A9631C1EBA24005927A5 /* RootViewController.m in Sources */,
 				A6C7A9691C1EBAFF005927A5 /* MenuTableViewController.m in Sources */,
+				CE8B10BC1C25DEC60038C322 /* CustomTableViewCell.m in Sources */,
 				A6C7A9301C1EB348005927A5 /* main.m in Sources */,
+				CE8B10C01C26EC510038C322 /* NodeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -514,6 +530,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Nebuchadnezzar/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = changeme.Nebuchadnezzar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -526,6 +543,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Nebuchadnezzar/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = changeme.Nebuchadnezzar;
 				PRODUCT_NAME = "$(TARGET_NAME)";

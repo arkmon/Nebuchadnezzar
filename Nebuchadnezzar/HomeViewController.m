@@ -19,10 +19,14 @@
     [self.labelBtn setEnabled:NO];
     _clockLbl.text=[[NSDate date] description];
     // timer is set & will be triggered each second
-    [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(showTime) userInfo:nil repeats:YES];
+    
     // Do any additional setup after loading the view, typically from a nib.
 }
-
+-(void)viewWillAppear:(BOOL)animated {
+    
+    [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(showTime) userInfo:nil repeats:YES];
+    
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -30,13 +34,16 @@
 -(void)showTime{
     
     NSDate *currDate = [NSDate date];
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc]init];
-    [dateFormatter setDateFormat:@"HH:mm"];
-    NSString *dateString = [dateFormatter stringFromDate:currDate];
+    NSDateFormatter *dateFormatter1 = [[NSDateFormatter alloc]init];
+    [dateFormatter1 setDateFormat:@"HH:mm"];
+    
+    NSString *dateString = [dateFormatter1 stringFromDate:currDate];
     _clockLbl.text=dateString;
     
-    [dateFormatter setDateFormat:@"EEEE dd MMMM"];
-    dateString = [dateFormatter stringFromDate:currDate];
+    NSDateFormatter *dateFormatter2 = [[NSDateFormatter alloc]init];
+    
+    [dateFormatter2 setDateFormat:@"EEEE dd MMMM"];
+    dateString = [dateFormatter2 stringFromDate:currDate];
     
     _dateLbl.text = dateString;
     
