@@ -90,10 +90,12 @@
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
+    [self performSegueWithIdentifier:@"showDetails" sender:nil];
+    
     
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)sectionIndex
 {
-    return 10;
+    return _myArrayTitles.count;
 }
 @end

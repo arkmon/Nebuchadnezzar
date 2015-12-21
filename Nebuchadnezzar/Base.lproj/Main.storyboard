@@ -323,7 +323,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2121" y="928"/>
+            <point key="canvasLocation" x="2746" y="628"/>
         </scene>
         <!--Second View Controller-->
         <scene sceneID="uDB-hm-zqI">
@@ -508,7 +508,7 @@
                                 <rect key="frame" x="0.0" y="22" width="768" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fFy-Pm-PSa" id="9yl-S4-AHJ">
-                                    <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="768" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -543,8 +543,8 @@
                                         <rect key="frame" x="0.0" y="56" width="1024" height="625"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <connections>
-                                            <outlet property="dataSource" destination="xBy-a2-9he" id="vd2-Dm-Nx3"/>
-                                            <outlet property="delegate" destination="xBy-a2-9he" id="CRm-UT-XhO"/>
+                                            <outlet property="dataSource" destination="xBy-a2-9he" id="NGy-W3-htT"/>
+                                            <outlet property="delegate" destination="xBy-a2-9he" id="1F4-ZB-yPb"/>
                                         </connections>
                                     </tableView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Node ID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TuX-la-h0N">
@@ -637,13 +637,7 @@
                             <constraint firstAttribute="trailing" secondItem="Pu3-qE-MvI" secondAttribute="trailing" id="bW2-aE-G9x"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="f2J-eo-Ilh">
-                        <barButtonItem key="leftBarButtonItem" title="Menu" id="7JI-tW-zlE">
-                            <connections>
-                                <action selector="showMenu" destination="xBy-a2-9he" id="Kvm-Rt-Dge"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="f2J-eo-Ilh"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nv0-l8-Oyy" userLabel="First Responder" sceneMemberID="firstResponder"/>
