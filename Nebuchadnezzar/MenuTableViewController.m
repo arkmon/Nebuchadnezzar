@@ -47,7 +47,7 @@
         label.text = @"Warehouse Name.";
         label.font = [UIFont fontWithName:@"HelveticaNeue" size:21];
         label.backgroundColor = [UIColor clearColor];
-        label.textColor = [UIColor colorWithRed:62/255.0f green:68/255.0f blue:75/255.0f alpha:1.0f];
+        label.textColor = [UIColor whiteColor];
         [label sizeToFit];
         label.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin;
         
@@ -73,7 +73,7 @@
     label.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin;
     
     UILabel *label2 = [[UILabel alloc] initWithFrame:CGRectMake(10, 50, 0, 24)];
-    label2.text = @"Software Version Number";
+    label2.text = @"© 2015 Copyright - All rights reserved.";
     label2.font = [UIFont fontWithName:@"HelveticaNeue" size:10];
     label2.backgroundColor = [UIColor clearColor];
     label2.textColor = [UIColor colorWithRed:62/255.0f green:68/255.0f blue:75/255.0f alpha:1.0f];
